@@ -1,0 +1,37 @@
+{
+    "events_processed": 10000,
+    "alerts_generated": 1,
+    "auto_remediated": 1,
+    "avg_containment_ms": 401,
+    "mttd_reduction": "40%",
+    "mttr_reduction": "70%",
+    "sample_playbook_results": [
+        {
+            "alert_id": "ALERT-16509",
+            "containment_time_ms": 401,
+            "steps_executed": [
+                {
+                    "step": "Threat Intel Enrichment",
+                    "result": "IP 203.81.198.51 found in AbuseIPDB (confidence: 87%)",
+                    "duration_ms": 100
+                },
+                {
+                    "step": "Credential Revocation",
+                    "result": "IAM session tokens invalidated, access keys rotated",
+                    "duration_ms": 150
+                },
+                {
+                    "step": "IP Block",
+                    "result": "WAF rule added to block 203.81.198.51",
+                    "duration_ms": 100
+                },
+                {
+                    "step": "Incident Ticket Created",
+                    "result": "JIRA ticket INC-93600 created with full context",
+                    "duration_ms": 50
+                }
+            ],
+            "status": "CONTAINED"
+        }
+    ]
+}
