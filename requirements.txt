@@ -1,0 +1,4 @@
+# Pin Splunk SDK + HTTP client for the real-SIEM integration path.
+splunk-sdk>=2.0.0,<3
+requests>=2.31,<3
+PyYAML>=6.0,<7
